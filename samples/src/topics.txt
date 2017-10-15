@@ -1,0 +1,43 @@
+შესავალი (1)
+    რა არის ანგულარი
+    Angular cli
+    პირველი პროექტი (Hello World)
+    რა არის typescript
+
+Typescript ანგულარისთვის (1)
+    ტიპები
+    კლასები
+    ინტერფეისები
+    Generic-ები
+
+საფუძვლები (1 - 2)
+    როგორ მუშაობს ანგულარი
+    კომპონენტების ზოგადი მიმოხილვა
+    კომპონენტების შექმნა cli-ით
+    კომპონენტების გასტილვა
+    Databinding
+    String interpolation
+    Property binding
+    Event binding
+    Two-Way Databinding (FormsModule)
+    დირექტივები
+    ngIf, ngClass, ngStyle, ngFor
+
+task-01
+
+03 - კომპონენტები და databinding (2 - 3)
+    /------\
+    Custom properties
+    Custom properties - Aliases
+    Custom events
+    Custom events - Aliases
+    /------\
+    ლოკალური Reference-ები კომპონენტში
+    @ViewChild - წვდომა DOM-ზე და ტემპლეიტზე
+    /------\
+    Ng-content
+    კომპონენტის lifecycle
+    Lifecycle hook-ები
+    @ContentChild
+
+task-02

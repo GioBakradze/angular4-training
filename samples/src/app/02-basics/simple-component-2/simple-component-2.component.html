@@ -1,0 +1,23 @@
+<p>
+    simple-component-2 works!
+</p>
+
+<div class="form-group">
+    <label for="input_1">Input 1</label>
+    <input type="text" id="input_1" class="form-control" (input)="inputDataChanged($event)">
+</div>
+
+<div class="alert alert-info">{{input1Text}}</div>
+
+<hr>
+
+<div class="form-group">
+    <label for="input_2">Input 2</label>
+    <input type="text" id="input_2" class="form-control" [(ngModel)]="input2Text">
+</div>
+
+<button class="btn btn-primary" (click)="changeInput2Text()">Change input 2 text</button>
+
+<br><br>
+
+<div class="alert alert-danger">{{input2Text}}</div>

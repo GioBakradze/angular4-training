@@ -1,0 +1,18 @@
+<div class="form-group">
+
+    <label>Name</label>
+    <input type="text" [(ngModel)]="personName" class="form-control">
+
+</div>
+
+<div class="row">
+    <div class="col-xs-3">
+
+        <app-person-badge [name]="personName" [age]="personAge" (gotRich)="someoneGotRich($event)"></app-person-badge>
+
+    </div>
+</div>
+
+<div class="alert alert-success" *ngIf="message"> {{message}} </div>
+
+

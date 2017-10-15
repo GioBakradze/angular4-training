@@ -1,0 +1,16 @@
+<input type="text" [(ngModel)]="warningMessage" class="form-control">
+
+<br>
+
+<input type="text" [(ngModel)]="warningTitle" class="form-control">
+
+<br>
+
+<button type="button" class="btn btn-primary" (click)="addWarning()">Add Warning</button>
+<button type="button" class="btn btn-danger" (click)="removeWarning()">Remove Warning</button>
+
+<hr>
+
+<app-warning-panel [title]="warningTitle" *ngFor="let warning of warnings">
+    <p #parentP>{{warning}}</p>
+</app-warning-panel>

@@ -1,0 +1,28 @@
+<!-- ngIf -->
+<button class="btn btn-primary" (click)="isDangerousMessageVisible = !isDangerousMessageVisible">
+    Show/Hide Dangerous Message
+</button>
+<br><br>
+<div class="alert alert-danger" *ngIf="isDangerousMessageVisible">apocalypse is near</div>
+
+<hr>
+
+<!-- ngIf with else -->
+<button class="btn btn-primary" (click)="ifElseMessage = !ifElseMessage">if with else</button>
+<br><br>
+<div class="alert alert-warning" *ngIf="ifElseMessage; else infoMessage">Warning message</div>
+<ng-template #infoMessage>
+    <div class="alert alert-info">Info message</div>
+</ng-template>
+
+<!-- ngFor -->
+<ul>
+    <li *ngFor="let item of itemsList; let i=index"> {{item}} {{i}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let name of coloredNames" [class.red]="name.isRed">
+        {{name.name}}
+        <input type="checkbox" [(ngModel)]="name.isRed">
+    </li>
+</ul>
