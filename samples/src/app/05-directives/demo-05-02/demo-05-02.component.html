@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-primary" (click)="show = !show">
+    {{show ? 'hide' : 'show'}}
+</button>
+
+<p *ngIf="show">
+    show paragraph
+</p>
+
+<ng-template [ngIf]="show">
+    <p>
+        show paragraph
+    </p>
+</ng-template>
+
+<p *appUnless="show">
+    show unless paragraph
+</p>

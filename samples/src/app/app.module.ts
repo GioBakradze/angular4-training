@@ -14,9 +14,25 @@ import { Demo0303Component } from './03-components-and-databinding/03-lifecycle/
 import { PanelComponent } from './03-components-and-databinding/03-lifecycle/panel/panel.component';
 import { Demo030302Component } from './03-components-and-databinding/03-lifecycle/demo-03-03-02/demo-03-03-02.component';
 import { WarningPanelComponent } from './03-components-and-databinding/03-lifecycle/warning-panel/warning-panel.component';
+import { Demo0401Component } from './04-services/01-shared-logic/demo-04-01/demo-04-01.component';
+import { Min1Component } from './04-services/01-shared-logic/min-1/min-1.component';
+import { Min2Component } from './04-services/01-shared-logic/min-2/min-2.component';
 import { Demo0101Component } from './01-typescript-basics/demo-01-01/demo-01-01.component';
 import { Demo0102Component } from './01-typescript-basics/demo-01-02/demo-01-02.component';
 import { Demo0103Component } from './01-typescript-basics/demo-01-03/demo-01-03.component';
+import { Demo0402Component } from './04-services/02-shared-state/demo-04-02/demo-04-02.component';
+import { PhonesListComponent } from './04-services/02-shared-state/phones-list/phones-list.component';
+import { PhonesFormComponent } from './04-services/02-shared-state/phones-form/phones-form.component';
+import { PhonesCountComponent } from './04-services/02-shared-state/phones-count/phones-count.component';
+import { RedBackgroundDirective } from './05-directives/red-background.directive';
+import { Demo0501Component } from './05-directives/demo-05-01/demo-05-01.component';
+import { BetterRedBackgroundDirective } from './05-directives/better-red-background.directive';
+import { EventBackgroundDirective } from './05-directives/event-background.directive';
+import { BindingEventBackgroundDirective } from './05-directives/binding-event-background.directive';
+import { HighlighDirective } from './05-directives/highligh.directive';
+import { Demo0502Component } from './05-directives/demo-05-02/demo-05-02.component';
+import { UnlessDirective } from './05-directives/unless.directive';
+import { Demo0503Component } from './05-directives/demo-05-03/demo-05-03.component';
 
 @NgModule({
     declarations: [
@@ -31,9 +47,25 @@ import { Demo0103Component } from './01-typescript-basics/demo-01-03/demo-01-03.
         PanelComponent,
         Demo030302Component,
         WarningPanelComponent,
+        Demo0401Component,
+        Min1Component,
+        Min2Component,
         Demo0101Component,
         Demo0102Component,
-        Demo0103Component
+        Demo0103Component,
+        Demo0402Component,
+        PhonesListComponent,
+        PhonesFormComponent,
+        PhonesCountComponent,
+        RedBackgroundDirective,
+        Demo0501Component,
+        BetterRedBackgroundDirective,
+        EventBackgroundDirective,
+        BindingEventBackgroundDirective,
+        HighlighDirective,
+        Demo0502Component,
+        UnlessDirective,
+        Demo0503Component
     ],
     imports: [
         BrowserModule,

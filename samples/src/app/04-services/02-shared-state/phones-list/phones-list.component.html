@@ -1,0 +1,8 @@
+<div class="alert alert-warning" *ngFor="let number of phoneBookService.getNumbersList(); let i = index">
+    {{number.name}}:
+
+    <b>{{number.number}}</b>
+
+    <button type="button" (click)="remove(i)"  class="btn btn-xs btn-danger pull-right">X</button>
+
+</div>

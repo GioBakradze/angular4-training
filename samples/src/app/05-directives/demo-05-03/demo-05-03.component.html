@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="name">
+
+<hr>
+
+<div [ngSwitch]="name">
+    <p *ngSwitchCase="'gio'">Gio is a programmer</p>
+    <p *ngSwitchCase="'dachi'">Dachi is an architect</p>
+    <p *ngSwitchCase="'zaza'">Zaza is a programmer</p>
+    <p *ngSwitchDefault>Please type in valid name, hint: gio, dachi, zaza</p>
+</div>
