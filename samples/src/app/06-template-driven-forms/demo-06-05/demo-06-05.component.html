@@ -1,0 +1,67 @@
+<form (submit)="onSubmit()" #form="ngForm">
+
+    <div class="form-group">
+        <input
+            ngModel
+            name="name"
+
+            placeholder="Name"
+            type="text"
+            class="form-control">
+    </div>
+
+    <div class="form-group">
+        <input
+            [ngModel]="26"
+            name="age"
+
+            placeholder="Age"
+            type="text"
+            class="form-control">
+    </div>
+
+    <div ngModelGroup="hobbies">
+        <div class="form-group">
+            <input
+
+                name="hobby1"
+                ngModel
+
+                placeholder="Hobby 1"
+                type="text"
+                class="form-control">
+        </div>
+        <div class="form-group">
+            <input
+                name="hobby2"
+                ngModel
+
+                placeholder="Hobby 2"
+
+                type="text"
+                class="form-control">
+        </div>
+    </div>
+
+    <div class="radio">
+        <label>
+            <input name="gender"
+                   ngModel
+                   value="male" type="radio">
+            Male
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input name="gender"
+                   [ngModel]="'male'"
+                   value="female" type="radio">
+            Female
+        </label>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-warning" (click)="setAge()">Set Some Age</button>
+    <button type="button" class="btn btn-danger" (click)="reset()">Reset Form</button>
+</form>

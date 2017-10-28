@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-xs-3">
+
+
+        <form (submit)="onSubmit(form)" #form="ngForm">
+            <div class="form-group"
+                 [class.has-error]="username.invalid && username.touched">
+                <input
+                    name="username"
+                    ngModel
+
+                    length3
+
+                    #username="ngModel"
+
+                    placeholder="Username"
+                    type="text"
+                    class="form-control">
+                <span *ngIf="username.invalid && username.touched" class="help-block">
+                    Username must be exactly 3 characters
+                </span>
+            </div>
+
+            <div class="form-group"
+                 [class.has-error]="password.invalid && password.touched">
+                <input
+                    name="password"
+                    ngModel
+
+                    required
+
+                    #password="ngModel"
+
+                    placeholder="Password"
+                    type="password"
+                    class="form-control">
+                <span
+                    *ngIf="password.invalid && password.touched"
+                    class="help-block">
+                    Password is required
+                </span>
+            </div>
+
+            <div class="form-group"
+                [class.has-error]="confirmPassword.invalid && confirmPassword.touched">
+                <input
+                    name="confirmPassword"
+                    ngModel
+
+                    [confirm]="password.value"
+                    #confirmPassword="ngModel"
+
+                    placeholder="Confirm Password"
+                    type="password"
+                    class="form-control">
+                <span
+                    *ngIf="confirmPassword.invalid && confirmPassword.touched"
+                    class="help-block">
+                    Passwords do not match
+                </span>
+            </div>
+
+            <button
+                [disabled]="form.invalid"
+                type="submit"
+                class="btn btn-primary">Submit
+            </button>
+        </form>
+
+
+    </div>
+</div>
+
+

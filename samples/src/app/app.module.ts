@@ -33,6 +33,13 @@ import { HighlighDirective } from './05-directives/highligh.directive';
 import { Demo0502Component } from './05-directives/demo-05-02/demo-05-02.component';
 import { UnlessDirective } from './05-directives/unless.directive';
 import { Demo0503Component } from './05-directives/demo-05-03/demo-05-03.component';
+import { Demo0601Component } from './06-template-driven-forms/demo-06-01/demo-06-01.component';
+import { Demo0602Component } from './06-template-driven-forms/demo-06-02/demo-06-02.component';
+import { Demo0603Component } from './06-template-driven-forms/demo-06-03/demo-06-03.component';
+import { Demo0604Component } from './06-template-driven-forms/demo-06-04/demo-06-04.component';
+import { Length3ValidatorDirective } from './06-template-driven-forms/length-3-validator.directive';
+import { ConfirmValidatorDirective } from './06-template-driven-forms/confirm-validator.directive';
+import { Demo0605Component } from './06-template-driven-forms/demo-06-05/demo-06-05.component';
 
 @NgModule({
     declarations: [
@@ -65,7 +72,14 @@ import { Demo0503Component } from './05-directives/demo-05-03/demo-05-03.compone
         HighlighDirective,
         Demo0502Component,
         UnlessDirective,
-        Demo0503Component
+        Demo0503Component,
+        Demo0601Component,
+        Demo0602Component,
+        Demo0603Component,
+        Demo0604Component,
+        Length3ValidatorDirective,
+        ConfirmValidatorDirective,
+        Demo0605Component
     ],
     imports: [
         BrowserModule,
