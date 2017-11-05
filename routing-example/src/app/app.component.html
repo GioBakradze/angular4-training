@@ -1,0 +1,30 @@
+<br>
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/">Home</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/profile">Profile</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/news/2">News</a>
+
+
+            <a routerLink="/news/5" style="display: none">News</a>
+            <a routerLink="/news/6" style="display: none">News</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/person">Person</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/secret-route/s">Secret Route</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/trap-route">Trap Route</a>
+        </li>
+    </ul>
+    <br>
+    <router-outlet></router-outlet>
+</div>
+

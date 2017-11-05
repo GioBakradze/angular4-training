@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -40,6 +40,12 @@ import { Demo0604Component } from './06-template-driven-forms/demo-06-04/demo-06
 import { Length3ValidatorDirective } from './06-template-driven-forms/length-3-validator.directive';
 import { ConfirmValidatorDirective } from './06-template-driven-forms/confirm-validator.directive';
 import { Demo0605Component } from './06-template-driven-forms/demo-06-05/demo-06-05.component';
+import { Demo0701Component } from './07-reactive-forms/demo-07-01/demo-07-01.component';
+import { Demo0702Component } from './07-reactive-forms/demo-07-02/demo-07-02.component';
+import { Demo0703Component } from './07-reactive-forms/demo-07-03/demo-07-03.component';
+import { Demo0801Component } from './08-http/demo-08-01/demo-08-01.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { BasicInterceptorService } from './08-http/basic-interceptor.service';
 
 @NgModule({
     declarations: [
@@ -79,14 +85,26 @@ import { Demo0605Component } from './06-template-driven-forms/demo-06-05/demo-06
         Demo0604Component,
         Length3ValidatorDirective,
         ConfirmValidatorDirective,
-        Demo0605Component
+        Demo0605Component,
+        Demo0701Component,
+        Demo0702Component,
+        Demo0703Component,
+        Demo0801Component
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        ReactiveFormsModule,
+        HttpClientModule
     ],
-    providers: [],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: BasicInterceptorService,
+            multi: true
+        }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

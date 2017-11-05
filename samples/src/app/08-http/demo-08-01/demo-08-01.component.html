@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-xs-3">
+
+        <form (submit)="addUser(form)" #form="ngForm">
+            <div
+                class="form-group"
+                [class.has-error]="name.touched && name.invalid"
+            >
+                <input
+
+                    required
+                    name="name"
+                    ngModel
+
+                    #name="ngModel"
+
+                    type="text" class="form-control">
+            </div>
+            <div
+                class="form-group"
+                [class.has-error]="email.touched && email.invalid"
+            >
+                <input
+
+                    required
+                    email
+                    name="email"
+                    ngModel
+
+                    #email="ngModel"
+
+                    type="email" class="form-control">
+            </div>
+            <button type="submit"
+                    [disabled]="form.invalid"
+                    class="btn btn-primary">
+                Add User
+            </button>
+        </form>
+
+    </div>
+</div>
+
+<hr>
+
+<div
+    *ngFor="let user of usersList"
+    class="panel panel-default">
+    <div class="panel-body">
+        {{user.name}} <b>{{user.email}}</b>
+    </div>
+</div>
