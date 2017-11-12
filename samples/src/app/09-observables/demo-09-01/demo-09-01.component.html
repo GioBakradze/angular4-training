@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-3">
+        <input type="text" [(ngModel)]="text" class="form-control">
+        <hr>
+        <button class="btn btn-primary" (click)="clicked()">Push</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-3">
+        <input type="text" [(ngModel)]="anotherText" class="form-control">
+        <hr>
+        <button class="btn btn-primary" (click)="anotherSimpleSubject.next(anotherText)">Push</button>
+    </div>
+</div>

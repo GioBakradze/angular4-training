@@ -46,6 +46,12 @@ import { Demo0703Component } from './07-reactive-forms/demo-07-03/demo-07-03.com
 import { Demo0801Component } from './08-http/demo-08-01/demo-08-01.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BasicInterceptorService } from './08-http/basic-interceptor.service';
+import { Demo0901Component } from './09-observables/demo-09-01/demo-09-01.component';
+import { Demo0902Component } from './09-observables/demo-09-02/demo-09-02.component';
+import { Demo1001Component } from './10-pipes/demo-10-01/demo-10-01.component';
+import { ShortenPipe } from './10-pipes/shorten.pipe';
+import { ShortenArgsPipe } from './10-pipes/shorten-args.pipe';
+import { Demo1002Component } from './10-pipes/demo-10-02/demo-10-02.component';
 
 @NgModule({
     declarations: [
@@ -89,7 +95,13 @@ import { BasicInterceptorService } from './08-http/basic-interceptor.service';
         Demo0701Component,
         Demo0702Component,
         Demo0703Component,
-        Demo0801Component
+        Demo0801Component,
+        Demo0901Component,
+        Demo0902Component,
+        Demo1001Component,
+        ShortenPipe,
+        ShortenArgsPipe,
+        Demo1002Component
     ],
     imports: [
         BrowserModule,

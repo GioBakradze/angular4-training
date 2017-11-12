@@ -26,8 +26,16 @@ const routes: Routes = [
             {path: 'form', component: PersonFormComponent}
         ]
     },
-    {path: 'secret-route/:secret', component: SecretRouteComponent, canActivate: [SecretGuardService]},
-    {path: 'trap-route', component: TrapRouteComponent, canDeactivate: [TrapGuardService]}
+    {
+        path: 'secret-route/:secret',
+        component: SecretRouteComponent, 
+        canActivate: [SecretGuardService]
+    },
+    {
+        path: 'trap-route',
+        component: TrapRouteComponent,
+        canDeactivate: [TrapGuardService]
+    }
 ];
 
 @NgModule({

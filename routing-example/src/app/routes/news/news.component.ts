@@ -19,6 +19,7 @@ export class NewsComponent implements OnInit {
 
         // this.activatedRoute.params.subscribe(params => {
         //     console.log(params);
+        //     this.newsId = params.id;
         // });
     }
 
