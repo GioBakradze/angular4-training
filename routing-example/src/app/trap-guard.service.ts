@@ -7,12 +7,10 @@ import { TrapRouteComponent } from './trap-route/trap-route.component';
 export class TrapGuardService implements CanDeactivate<TrapRouteComponent> {
 
 
-    canDeactivate(
-        component: TrapRouteComponent,
-        currentRoute: ActivatedRouteSnapshot,
-        currentState: RouterStateSnapshot,
-        nextState?: RouterStateSnapshot):
-        Observable<boolean> | Promise<boolean> | boolean {
+    canDeactivate(component: TrapRouteComponent,
+                  currentRoute: ActivatedRouteSnapshot,
+                  currentState: RouterStateSnapshot,
+                  nextState?: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
 
         if (component.word === 'super secret') {
             return true;

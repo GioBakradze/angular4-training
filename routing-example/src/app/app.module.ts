@@ -28,13 +28,17 @@ const routes: Routes = [
     },
     {
         path: 'secret-route/:secret',
-        component: SecretRouteComponent, 
+        component: SecretRouteComponent,
         canActivate: [SecretGuardService]
     },
     {
         path: 'trap-route',
         component: TrapRouteComponent,
         canDeactivate: [TrapGuardService]
+    },
+    {
+        path: 'lazy-page',
+        loadChildren: './lazy-page/lazy-page.module#LazyPageModule'
     }
 ];
 
