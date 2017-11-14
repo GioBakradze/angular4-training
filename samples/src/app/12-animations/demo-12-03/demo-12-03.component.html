@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-3">
+        <input type="text" [(ngModel)]="text" class="form-control">
+        <br>
+        <button class="btn btn-primary" (click)="list.push(text); text = '';">Add</button>
+    </div>
+    <div class="col-xs-12"></div>
+    <div class="col-xs-3">
+        <br>
+        <ul class="list-group">
+            <li class="list-group-item" [@listTrigger] *ngFor="let item of list; let i = index;">
+                {{item}}
+                <button class="btn btn-xs btn-danger pull-right" (click)="list.splice(i, 1)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>

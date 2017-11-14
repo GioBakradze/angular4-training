@@ -52,6 +52,12 @@ import { Demo1001Component } from './10-pipes/demo-10-01/demo-10-01.component';
 import { ShortenPipe } from './10-pipes/shorten.pipe';
 import { ShortenArgsPipe } from './10-pipes/shorten-args.pipe';
 import { Demo1002Component } from './10-pipes/demo-10-02/demo-10-02.component';
+import { Demo1101Component } from './11-modules/demo-11-01/demo-11-01.component';
+import { OtherModuleModule } from './11-modules/other-module/other-module.module';
+import { Demo1201Component } from './12-animations/demo-12-01/demo-12-01.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Demo1202Component } from './12-animations/demo-12-02/demo-12-02.component';
+import { Demo1203Component } from './12-animations/demo-12-03/demo-12-03.component';
 
 @NgModule({
     declarations: [
@@ -101,14 +107,20 @@ import { Demo1002Component } from './10-pipes/demo-10-02/demo-10-02.component';
         Demo1001Component,
         ShortenPipe,
         ShortenArgsPipe,
-        Demo1002Component
+        Demo1002Component,
+        Demo1101Component,
+        Demo1201Component,
+        Demo1202Component,
+        Demo1203Component
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        OtherModuleModule,
+        BrowserAnimationsModule
     ],
     providers: [
         {
